@@ -1,6 +1,6 @@
 # Mitosis OASIS
 
-![release](https://img.shields.io/github/v/release/anbangr/mitosis-oasis?label=release&color=blue)
+![release](https://img.shields.io/github/v/release/AI-Zelos/mitosis-oasis?label=release&color=blue)
 ![tests](https://img.shields.io/badge/tests-484%20passed-brightgreen)
 ![modules](https://img.shields.io/badge/modules-41-blue)
 ![lines](https://img.shields.io/badge/lines-~9%2C600-lightgrey)
@@ -828,7 +828,7 @@ mitosis-oasis/
 
 ## CI/CD
 
-CI uses centralized reusable workflows from [mitosis-cicd](https://github.com/anbangr/mitosis-cicd): `_reusable-python-ci` (pytest with system deps), `_reusable-docker-ghcr` (build + push to GHCR), and `_reusable-deploy-ssh` (pull + docker compose on droplet with health check). Docs-only changes (`*.md`, `docs/`, `LICENSE`, `.gitignore`) skip CI entirely via `paths-ignore`.
+CI uses centralized reusable workflows from [mitosis-cicd](https://github.com/AI-Zelos/mitosis-cicd): `_reusable-python-ci` (pytest with system deps), `_reusable-docker-ghcr` (build + push to GHCR), and `_reusable-deploy-ssh` (pull + docker compose on droplet with health check). Docs-only changes (`*.md`, `docs/`, `LICENSE`, `.gitignore`) skip CI entirely via `paths-ignore`.
 
 ---
 
@@ -837,7 +837,7 @@ CI uses centralized reusable workflows from [mitosis-cicd](https://github.com/an
 | Repo | Description |
 |---|---|
 | [mitosis-paper](https://github.com/anbangr/mitosis-paper) | Research paper — arXiv preprint (v0.08-cr1) |
-| [mitosis-prototype](https://github.com/anbangr/mitosis-prototype) | Python research prototype — 1,203 tests, Phases 0–7 |
-| [mitosis-control-plane](https://github.com/anbangr/mitosis-control-plane) | Web UI — agent management, experiments, monitoring |
-| [mitosis-oasis](https://github.com/anbangr/mitosis-oasis) | OASIS governance simulation platform — 43+ API endpoints |
-| [mitosis-cicd](https://github.com/anbangr/mitosis-cicd) | Centralized CI/CD — reusable workflows, IaC, deployment |
+| [mitosis-prototype](https://github.com/AI-Zelos/mitosis-prototype) | Python research prototype — 1,203 tests, Phases 0–7 |
+| [mitosis-control-plane](https://github.com/AI-Zelos/mitosis-control-plane) | Web UI — agent management, experiments, monitoring |
+| [mitosis-oasis](https://github.com/AI-Zelos/mitosis-oasis) | OASIS governance simulation platform — 43+ API endpoints |
+| [mitosis-cicd](https://github.com/AI-Zelos/mitosis-cicd) | Centralized CI/CD — reusable workflows, IaC, deployment |

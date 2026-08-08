@@ -108,8 +108,8 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
-            ghcr.io/anbangr/mitosis-oasis:latest
-            ghcr.io/anbangr/mitosis-oasis:${{ github.sha }}
+            ghcr.io/ai-zelos/mitosis-oasis:latest
+            ghcr.io/ai-zelos/mitosis-oasis:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -155,7 +155,7 @@ jobs:
       - name: Deploy new image
         run: |
           kubectl set image deployment/mitosis-oasis \
-            oasis=ghcr.io/anbangr/mitosis-oasis:${{ github.sha }} \
+            oasis=ghcr.io/ai-zelos/mitosis-oasis:${{ github.sha }} \
             -n mitosis-prod
           kubectl rollout status deployment/mitosis-oasis -n mitosis-prod --timeout=180s
       - name: Health check

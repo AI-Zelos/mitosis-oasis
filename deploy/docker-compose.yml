@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   mitosis-oasis:
-    image: ghcr.io/anbangr/mitosis-oasis:latest
+    image: ghcr.io/ai-zelos/mitosis-oasis:latest
     container_name: mitosis-oasis
     restart: unless-stopped
     ports:
@@ -19,7 +19,7 @@ services:
       start_period: 10s
 
   agent-fleet:
-    image: ghcr.io/anbangr/mitosis-prototype:latest
+    image: ghcr.io/ai-zelos/mitosis-prototype:latest
     depends_on:
       mitosis-oasis:
         condition: service_healthy

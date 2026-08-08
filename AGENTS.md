@@ -234,12 +234,12 @@ Every `.py` file must start with the Apache 2.0 license header. The pre-commit
 ## CI/CD
 
 Defined in `.github/workflows/ci.yml`, using reusable workflows from
-`anbangr/mitosis-cicd`:
+`AI-Zelos/mitosis-cicd`:
 
 1. **python-ci** — `pytest` on Python 3.10 with system deps (libcairo2-dev,
    libigraph-dev). Ruff formatting and coverage are disabled in CI.
 2. **docker** (on main push) — builds and pushes to GHCR
-   (`ghcr.io/anbangr/mitosis-oasis`).
+   (`ghcr.io/ai-zelos/mitosis-oasis`).
 3. **deploy** (on main push, after docker) — SSH deploy to DigitalOcean;
    health check at `/api/health`.
 
