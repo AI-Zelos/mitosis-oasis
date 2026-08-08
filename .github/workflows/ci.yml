@@ -42,7 +42,7 @@ jobs:
   # ── Python CI (pytest with system deps) ────────────────────────────────────
   python-ci:
     name: Python 3.10
-    runs-on: [self-hosted, build]
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -82,7 +82,7 @@ jobs:
     name: Build & push Docker image
     needs: [python-ci]
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    runs-on: [self-hosted, build]
+    runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
       contents: read
@@ -128,7 +128,7 @@ jobs:
     name: Deploy to GKE
     needs: [docker]
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    runs-on: [self-hosted, build, test]
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     concurrency:
       # Production rollouts must NEVER be cancelled mid-flight.
